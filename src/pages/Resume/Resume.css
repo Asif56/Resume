@@ -1,0 +1,189 @@
+
+
+.aboutme_text{
+    color: darkslategray !important;
+    font-size: smaller !important;
+    line-height: 18px !important;
+    white-space: pre-line;
+}
+
+/* TimeLine start */
+
+.resume_timeline .timeline_content{
+    padding-top: 4px;
+}
+
+.resume_timeline .timeline_content .timeline_title{
+    font-size: 16px !important;
+    font-weight: 500;
+}
+.resume_timeline .timeline_content .timeline_date{
+    color: darkslategray;
+}
+.resume_timeline .timeline_content .timeline_description{
+    color: gray;
+    font-size: small;
+    margin-top: 6px;
+}
+
+/* Timeline End */
+
+/* Service start */
+
+.service{
+    height: 100%;
+    text-align: center;
+    background: white ;
+    padding: 5px;
+    border-radius: 5px;
+    gap:5px;
+    transition:  0.5s ease
+    
+
+
+}
+
+.service:hover{
+    /* transform: translateX(100%); */
+    cursor: pointer;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+
+.service_title{
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    line-height: 35px !important;
+    text-align: center;
+}
+.service .service_description{
+    color: #989898 !important;
+    margin-right: 5px !important;
+    border-color: var(--main-color) !important;
+    text-align: center;
+    font-size: 14px;
+}
+.service_icon > .MuiSvgIcon-root{
+ font-size: 40px;
+ margin-left: 0;
+ font-weight: 300;
+ color: darkslategray;
+}
+
+/* Service enf */
+
+/* Skill start */
+
+.skill{
+    border-radius: 8px !important;
+    padding: 20px !important;
+    margin: 5px 10px !important;
+    box-shadow: 0 0 44px 0 rgba(4,6,4,.08) !important;
+    min-height: 186px !important;
+    min-width:165px;
+    /* max-width: 200px; */
+    /* height: 100% !important; */
+   
+}
+
+
+.skill .skill_title{
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    line-height: 35px !important;
+}
+
+.skill .skill_description{
+    display: flex !important;
+    align-items: center !important;
+    color: #989898 !important;
+    font-weight: 400 !important; 
+    line-height: 18px !important;
+}
+
+.skill .timeline_dot{
+    border-color: var(--main-color);
+    padding: 2px !important;
+    margin-right: 5px !important;
+}
+
+/* Skill end */
+
+/* contact start */
+.contactInfo_item{
+    font-size: 14px;
+    color: #787878;
+}
+.contactInfo_item >span{
+    color: black;
+    font-weight: 550 !important;
+}
+.contactInfo_social>a>.MuiSvgIcon-root{
+   
+    font-size: 20px;
+    margin-right: 10px;
+    color: black;
+}
+
+.contactInfo_socialsContainer{
+    /* display: flex; */
+    /* background: red; */
+    width: 80%;
+    /* justify-content: space-between; */
+    display: flex;
+    justify-content: space-between;
+}
+.contactInfo_social {
+    display: flex;
+    justify-content: space-between;
+}
+/* contact end */
+.innerclass {
+    display: flex;
+}
+
+:root{
+    --time:50s
+}
+.outerClass{
+    display: flex;
+    overflow: hidden;
+    width: inherit;
+    transition:  0.5s ease
+}
+
+.outerClass:hover{
+    cursor: pointer;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+
+.outerClass .first{
+    flex: 1;
+    animation: innerFirst var(--time)  infinite linear ;
+    animation-delay: calc(var(--time) * -1);
+}
+.outerClass .second{
+    flex: 1;
+    animation: innerSecond var(--time)  infinite linear ;
+    animation-delay: calc(var(--time) / -2);
+
+}
+
+
+@keyframes innerFirst {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes innerSecond {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-200%);
+    }
+  }
+ 

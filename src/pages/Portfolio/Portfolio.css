@@ -1,0 +1,114 @@
+.customTab .customeTab_item {
+    color: var(--main-color);
+    padding: 0px 10px;
+    border-radius: 8px;
+    flex-wrap: wrap;
+    min-width: 0;
+    margin: 5px;
+    outline-width: 0;
+    text-transform:capitalize;
+    transition: 1 ease linear;
+    font-size: 14px;
+  }
+
+  .customTab  [aria-selected=true]{
+    color: var(--main-color);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .css-heg063-MuiTabs-flexContainer {
+    flex-wrap: wrap;
+  }
+  
+  .customTab .customeTab_item:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  
+  /* ///////////tab end////////// */
+  
+  /* card */
+  
+  .customCard{
+    height: 100%;
+    min-width: 250px;
+    outline-width: 0px !important;
+    overflow: hidden !important;
+    margin: 10px;
+    transition:  1s ease !important
+  
+    
+  }
+  .customCard:hover{
+    cursor: pointer;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+  .customeCard_Content{
+    padding-bottom: 0px !important;
+  }
+  
+  .customCard .customeCard_title{
+   font-weight: 550;
+   margin-bottom: 5px !important;
+  }
+  .customCard .customeCard_caption{
+      font-weight: 550;
+      color: darkslategray !important;
+     }
+  
+  
+  /* card end */
+  
+  /* dialogue */
+  
+  .projectDialog{
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 500px !important;
+  width: 100%;
+  }
+  .projectDialog .projectDialog_image{
+  max-height:300px ;
+  object-fit: cover;
+  width: 100%;
+  object-position: center center;
+  
+  }
+  
+  .projectDialog .projectDialog_description{
+      margin-top: 10px ;
+      padding: 10px;
+  }
+  
+  
+  
+  .projectDialog .projectDialog_actions{
+  justify-content: center;
+  margin-bottom: 10px;
+  }
+  
+  .projectDialog .projectDialog_icon{
+   color: darkslategray;
+   cursor: pointer;
+   margin: 0 12px;
+   animation: blink 3s infinite ease-in-out;
+    
+  }
+
+  @keyframes blink {
+    0% { color: rgb(122, 232, 252); }
+    25% { color: rgb(255, 112, 112); }
+    50% {color: orange}
+    75% {color: rgb(50, 236, 50)}
+    100% { color: grey; }
+  }
+  
+ 
+  .projectDialog .projectDialog_icon:hover{
+   color: var(--main-color);
+  }
+  .projectDialog .projectDialog_icon>.MuiSvgIcon-root{
+      font-size: 20px !important;
+  }
+  
+  /* dialog :end */
+  
