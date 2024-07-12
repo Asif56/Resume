@@ -12,7 +12,7 @@ import BERN_1 from "../assets/images/BERN_1.png";
 import BERN_2 from "../assets/images/BERN_2.png";
 import image from "../assets/images/profileImage.jpg";
 
-export default {
+const data = {
   name: "Asif Malik",
   title: "Full Stack Web Developer",
 
@@ -199,3 +199,5 @@ export default {
     },
   ],
 };
+
+export default data

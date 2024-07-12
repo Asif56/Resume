@@ -71,7 +71,7 @@ function Profile() {
         <div className="btn_container">
           <a
             href="https://drive.google.com/file/d/1X2g8FEO4CaR7EJxPERDdz8NNmzlRF_N9/view?usp=sharing"
-            target="_blank"
+            target="_blank" rel="noreferrer"
             style={{ textDecoration: "none" }}
           >
             <CustomButton text={"Download-CV"} icon={<GetAppIcon />} />

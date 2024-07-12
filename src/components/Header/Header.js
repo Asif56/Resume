@@ -4,7 +4,7 @@ import { Nav, Navbar } from "react-bootstrap";
 // import {Home,Telegram} from '@mui/icons-material'
 import HomeIcon from "@mui/icons-material/Home";
 import TelegramIcon from "@mui/icons-material/Telegram";
-import { NavLink, useLocation, useNavigate, useParams } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import resumeData from "../../utils/ResumeData";
 import CustomButtom from "../Button/Button";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -53,7 +53,7 @@ function Header(props) {
         </Nav>
         <div className="header_right">
           {Object.keys(resumeData.socials).map((key) => (
-            <a href={resumeData.socials[key].link} target="_blank">
+            <a rel="noreferrer" href={resumeData.socials[key].link} target="_blank">
               {resumeData.socials[key].icon}
             </a>
           ))}

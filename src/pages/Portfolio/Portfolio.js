@@ -46,7 +46,7 @@ function Portfolio() {
         </DialogContent>
         <DialogActions className="projectDialog_actions">
           {projectDialog?.links?.map((item) => (
-            <a href={item.link} target="_blank" className="projectDialog_icon">
+            <a href={item.link} rel="noreferrer" target="_blank" className="projectDialog_icon">
               {item.icon}
             </a>
           ))}
@@ -92,7 +92,7 @@ function Portfolio() {
               label="All"
               value="All"
               className={
-                tabValue == "All" ? "customeTab_item active" : "customeTab_item"
+                tabValue === "All" ? "customeTab_item active" : "customeTab_item"
               }
             ></Tab>
             {UniqueTag(ResumeData.projects).map((tag) => (
@@ -100,7 +100,7 @@ function Portfolio() {
                 label={tag}
                 value={tag}
                 className={
-                  tabValue == "All"
+                  tabValue === "All"
                     ? "customeTab_item active"
                     : "customeTab_item"
                 }
@@ -115,7 +115,7 @@ function Portfolio() {
           <Grid container spacing={3}>
             {ResumeData.projects.map((items) => (
               <>
-                {items.tag.includes(tabValue) || tabValue == "All" ? (
+                {items.tag.includes(tabValue) || tabValue === "All" ? (
                   <Grid item lg={4} md={6} sm={6} xs={12} className="cardjj">
                     <Grow in timeout={1000}>
                       <Card
