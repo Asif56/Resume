@@ -13,34 +13,30 @@ import TimelineDot from "@mui/lab/TimelineDot";
 import CustomButton from "../../components/Button/Button";
 
 function Resume() {
-
-  const Skilled=({ResumeData,class1})=>{
+  const Skilled = ({ ResumeData, class1 }) => {
     return (
       // <div >
       <div className={`innerclass ${class1}`}>
         {ResumeData.skill.map((skill) => (
-        <Grid md={6} xs={12} sm={6} lg={3} >
-          {/* <Carousel.Item> */}
-              <Paper elevation={3} className="skill" fullWidth>
-            <Typography variant="h6" className="skill_title">
-              {skill.title}
-            </Typography>
-            {skill.description.map((desc) => (
-              <Typography variant="body2" className="skill_description">
-                <TimelineDot
-                  variant={"outlined"}
-                  className="timeline_dot"
-                />
-                {desc}
+          <Grid md={6} xs={12} sm={6} lg={3}>
+            {/* <Carousel.Item> */}
+            <Paper elevation={3} className="skill" fullWidth>
+              <Typography variant="h6" className="skill_title">
+                {skill.title}
               </Typography>
-            ))}
-          </Paper>
-         </Grid>
-      ))}
-      {/* // </div> */}
+              {skill.description.map((desc) => (
+                <Typography variant="body2" className="skill_description">
+                  <TimelineDot variant={"outlined"} className="timeline_dot" />
+                  {desc}
+                </Typography>
+              ))}
+            </Paper>
+          </Grid>
+        ))}
+        {/* // </div> */}
       </div>
-    )
-  }
+    );
+  };
 
   return (
     <>
@@ -78,7 +74,12 @@ function Resume() {
                         variant="body2"
                         className="timeline_description"
                       >
-                       <ul style={{paddingLeft:'16px'}}> {experiance.description.map((desc=>(<li>{desc}</li>)))}</ul>
+                        <ul style={{ paddingLeft: "16px" }}>
+                          {" "}
+                          {experiance.description.map((desc) => (
+                            <li>{desc}</li>
+                          ))}
+                        </ul>
                       </Typography>
                     </TimelineContent>
                   </TimelineItem>
@@ -120,7 +121,7 @@ function Resume() {
         <Grid item xs={12}>
           <Grid container spacing={2} justifyContent={"space-around"}>
             {ResumeData.service.map((key) => (
-              <Grid item  md={6}  lg={3}  sm={6} xs={12}>
+              <Grid item md={6} lg={3} sm={6} xs={12}>
                 <div className="service">
                   {/* <Icon className='service_icon'>{key.icon}</Icon> */}
                   <span>{key.icon}</span>
@@ -140,16 +141,16 @@ function Resume() {
           <h6 className="section_title_text">My Skills</h6>
         </Grid>
         <Grid item xs={12}>
-          <Grid container   justifyContent={'center'} >
-            <div  className="outerClass" style={{width:'760px'}} >
-            <Skilled ResumeData={ResumeData} class1='first'  />
-            <Skilled ResumeData={ResumeData}  class1='second'/>
+          <Grid container justifyContent={"center"}>
+            <div className="outerClass" style={{ width: "760px" }}>
+              <Skilled ResumeData={ResumeData} class1="first" />
+              <Skilled ResumeData={ResumeData} class1="second" />
             </div>
           </Grid>
         </Grid>
       </Grid>
 
-      <Grid   className="section pb_45" spacing={4} >
+      <Grid className="section pb_45" spacing={4}>
         <Grid item xs={12}>
           <Grid item className="section_title mb_30">
             <span></span>
@@ -200,15 +201,15 @@ function Resume() {
               <h6 className="section_title_text">Contact Information</h6>
             </Grid>
           </Grid>
-          <Grid item >
+          <Grid item>
             <Grid container spacing={2}>
-              <Grid item xs={12} xl={4} sm={6}  md={4}>
+              <Grid item xs={12} xl={4} sm={6} md={4}>
                 <Typography className="contactInfo_item">
                   <span>Address: </span>
                   {ResumeData.address}
                 </Typography>
               </Grid>
-              <Grid item xs={12} xl={4} sm={6}  md={4}>
+              <Grid item xs={12} xl={4} sm={6} md={4}>
                 <Typography className="contactInfo_item">
                   <span>Phone: </span>
                   {ResumeData.phone}
@@ -223,16 +224,24 @@ function Resume() {
             </Grid>
           </Grid>
           <Grid item xs={12}>
-            <Grid container class='contactInfo_socialsContainer'>
-              {Object.keys(ResumeData.socials).map(key=>(
-                <Grid marginTop={2} item xs={12} md={6} sm={6} className='contactInfo_social '>
-                  <a href={ResumeData.socials[key].link} >{ResumeData.socials[key].icon}</a>
+            <Grid container class="contactInfo_socialsContainer">
+              {Object.keys(ResumeData.socials).map((key) => (
+                <Grid
+                  marginTop={2}
+                  item
+                  xs={12}
+                  md={6}
+                  sm={6}
+                  className="contactInfo_social "
+                >
+                  <a href={ResumeData.socials[key].link}>
+                    {ResumeData.socials[key].icon}
+                  </a>
                 </Grid>
               ))}
             </Grid>
           </Grid>
         </Grid>
-
       </Grid>
     </>
   );
